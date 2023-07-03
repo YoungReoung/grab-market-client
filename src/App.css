@@ -1,6 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
 html,
 body,
 #root,
 #root > div {
   height: 100%;
+}
+
+#header {
+  min-height: 64px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+#header-area {
+  width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-area img {
+  width: 128px;
+  height: 36px;
+}
+/* 상위선택자(id가 header-area인 부모태그의 첫번째 자식태그인 img를 불러온것 */
+
+#body {
+  height: 100vh;
+  width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* margin: 0 auto; >> 부모태그를 기준으로 
+자식태그 가운데정렬 시켜주는 속성 */
+
+#footer {
+  height: 200px;
+  background-color: rgb(230, 230, 230);
 }
