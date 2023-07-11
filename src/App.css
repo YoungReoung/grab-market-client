@@ -12,7 +12,7 @@ body,
 }
 
 #header {
-  min-height: 64px;
+  height: 64px;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid gray;
@@ -20,6 +20,7 @@ body,
 
 #header-area {
   width: 1024px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,8 +33,9 @@ body,
 /* 상위선택자(id가 header-area인 부모태그의 첫번째 자식태그인 img를 불러온것 */
 
 #body {
-  height: 100vh;
-  width: 1024px;
+  min-height: 100vh;
+  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
   padding: 24px;
 }
@@ -44,4 +46,19 @@ body,
 #footer {
   height: 200px;
   background-color: rgb(230, 230, 230);
+}
+
+@media screen and (max-width: 400px) {
+  .product-card {
+    width: 160px !important;
+  }
+  #header {
+    padding: 0 8px;
+  }
+  #body {
+    padding: 0 8px;
+  }
+  .ant-carousel {
+    margin: 0 -8px;
+  }
 }
